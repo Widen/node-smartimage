@@ -1,0 +1,55 @@
+{
+  "name": "smartimage",
+  "version": "0.0.0",
+  "description": "A JavaScript client for Smartimage",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "debug": "~0.8.0",
+    "promise": "~4.0.0",
+    "envify": "^1.2.1"
+  },
+  "devDependencies": {
+    "browserify": "^3.44.2",
+    "corsproxy": "^0.2.14",
+    "coverify": "^1.0.6",
+    "minimist": "~0.0.8",
+    "oauth": "~0.9.11",
+    "st": "~0.4.1",
+    "tape": "~2.12.3",
+    "testling": "^1.6.1"
+  },
+  "testling": {
+    "browsers": [
+      "ie/10",
+      "firefox/latest",
+      "chrome/latest",
+      "safari/latest",
+      "opera/next"
+    ]
+  },
+  "browserify": {
+    "name": "smartimage",
+    "main": "./browser/index.js",
+    "base": "./browser"
+  },
+  "scripts": {
+    "prepublish": "browserify -t envify -o smartimage-browser.js index.js",
+    "build": "browserify -t envify -o static/smartimage-browser.js index.js",
+    "watch-js": "watchify index.js -o browser/smartimage.js -dv",
+    "test": "tape test/all-test.js",
+    "test-coverage": "browserify --debug -t coverify -t envify --bare test/all-test.js | node | coverify",
+    "test-browser": "browserify --debug -t envify test/all-test.js | testling ",
+    "test-browser-coverage": "npm run test-browser | coverify",
+    "corsproxy": "./node_modules/.bin/corsproxy",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Widen/node-smartimage.git"
+  },
+  "author": "Mark Feltner",
+  "license": "MIT"
+}
