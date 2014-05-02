@@ -1,0 +1,20 @@
+---
+addons:
+  firefox: "25.0"
+language: node_js
+node_js:
+- '0.11'
+- '0.10'
+- '0.9'
+env:
+  global:
+    - secure: "RTwnueM6XsmtkotLs5IdL4UsHt+4lVUHd9o3TQFfDKmwtrY0kRaYXCrCkMhgMXmEENSaa0bTWqLTe8rI9aoSTxSB0pCOUIKCUAPuyF2YCLiFOCldM289z9aqozWVSCLFwnnmIudw4Pcdl0n/wDX2hPA77HlpwqMwXDvaJ9vxVTc="
+    - secure: "vdThKCAVkUcGC7sc/81T2fpfCwdOYO1SRUFrfGKZK2RU+80Jer0AHJvzESnS3zMegg1Thm6ZytpF9wDU94c6QK0mFaJCwFFLlV+ABTGycqKcXObqcxXrDE+eTPaU2cpjcNVYVN+TB5Q2XN0LRrBrmjP6ZNxsOVRd7vvXM5HmCa0="
+script:
+- npm test
+branches:
+    only:
+        - master
+        - develop
+        - /^feature.*$/
+        - /^hotfix.*$/
