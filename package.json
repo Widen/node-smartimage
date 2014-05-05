@@ -8,8 +8,7 @@
   },
   "dependencies": {
     "debug": "~0.8.0",
-    "promise": "~4.0.0",
-    "envify": "^1.2.1"
+    "promise": "~4.0.0"
   },
   "devDependencies": {
     "browserify": "^3.44.2",
@@ -32,16 +31,15 @@
   },
   "browserify": {
     "name": "smartimage",
-    "main": "./browser/index.js",
-    "base": "./browser"
+    "main": "index.js"
   },
   "scripts": {
-    "prepublish": "browserify -t envify -o smartimage-browser.js index.js",
-    "build": "browserify -t envify -o static/smartimage-browser.js index.js",
-    "watch-js": "watchify index.js -o browser/smartimage.js -dv",
+    "prepublish": "npm test",
+    "build": "browserify -o static/smartimage-browser.js index.js",
+    "watch": "watchify index.js -o static/smartimage-browser.js -dv",
     "test": "tape test/all-test.js",
-    "test-coverage": "browserify --debug -t coverify -t envify --bare test/all-test.js | node | coverify",
-    "test-browser": "browserify --debug -t envify test/all-test.js | testling ",
+    "test-coverage": "browserify --debug -t coverify --bare test/all-test.js | node | coverify",
+    "test-browser": "browserify --debug test/all-test.js | testling ",
     "test-browser-coverage": "npm run test-browser | coverify",
     "corsproxy": "./node_modules/.bin/corsproxy",
     "start": "node server.js"
