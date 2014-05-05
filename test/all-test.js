@@ -19,9 +19,9 @@ var options = {
 };
 if (typeof window === 'undefined'){ // in node
     options.protocl = 'https';
-    options.host = 'my.smartimage.com';
+    options.host = 'private-013a1-smartimage.apiary-mock.com';
 } else { // in browser
-    options.protocol = 'https',
+    options.protocol = 'https';
     options.host = 'cors-anywhere-eu.herokuapp.com/private-013a1-smartimage.apiary-mock.com';
 }
 
