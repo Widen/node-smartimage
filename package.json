@@ -34,6 +34,7 @@
     "main": "index.js"
   },
   "scripts": {
+    "docs": "jsdoc index.js README.md && git checkout gh-pages && mv out/* . ; git add -u && rm -rf out && git commit -m 'docs: Update' && git push origin gh-pages && git checkout master",
     "prepublish": "npm test",
     "build": "browserify -o static/smartimage-browser.js index.js",
     "watch": "watchify index.js -o static/smartimage-browser.js -dv",
