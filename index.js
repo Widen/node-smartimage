@@ -18,14 +18,14 @@ var STATUS_CODES = http.STATUS_CODES,
  *
  * Make a simple request to the Smartimage REST API.
  *
- * @param String    method      An HTTP method corresponding to the request
+ * @param method    String      An HTTP method corresponding to the request
  *                              (can be GET, POST, PUT, PATCH, HEAD, or DELETE).
- * @param String    path        The path. See developer.github.com/api/v3/
- * @param Object    query       Any query data. Will be sent as query string
+ * @param path      String      The path. See developer.github.com/api/v3/
+ * @param query     Object      Any query data. Will be sent as query string
  *                              for GET/DELETE/HEAD, or body for others.
- * @param Object    options     Any other request options. See node's HTTP
+ * @param options   Object      Any other request options. See node's HTTP
  *                              module.
- * @param Function  callback    An optional callback. If not provided, a
+ * @param callback  Function    An optional callback. If not provided, a
  *                              promise is returned instead.
  *
  * @return Promise
@@ -191,7 +191,8 @@ var request = function(method, path, query, options, callback){
 /**
  * buffer
  *
- * Same parameters as `request`
+ * Same parameters as `request`. The response body will be a Buffer
+ * containing the entire response.
  *
  * @return Promise  A Promise where the request body is a buffer
  */
@@ -217,9 +218,10 @@ var buffer = function (method, path, query, options, callback){
 };
 
 /**
- * buffer
+ * json
  *
- * Same parameters as `request`
+ * Same parameters as `request`. The response body will be a JSON object
+ * containing the entire parsed response.
  *
  * @return Promise  A Promise where the request body is JSON.
  */
