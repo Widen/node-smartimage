@@ -9,6 +9,11 @@ the browser!
 [![Build
 Status](http://img.shields.io/travis/Widen/node-smartimage.svg?style=flat)](https://travis-ci.org/Widen/node-smartimage)
 
+[Documentation](http://widen.github.io/node-smartimage/)
+
+
+----
+
 # Quickstart
 
 Just set your options up like below including the username and password.
