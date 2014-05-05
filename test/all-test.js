@@ -9,8 +9,8 @@ var smartimage = require('../index');
 var options = {
     auth: {
         type: 'basic',
-        username: process.env.SI_USERNAME,
-        password: process.env.SI_PASSWORD
+        username: 'foo',
+        password: 'bar'
     },
     headers: {
         'foo': 'bar',
