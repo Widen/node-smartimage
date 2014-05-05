@@ -14,6 +14,7 @@
     "browserify": "^3.44.2",
     "corsproxy": "^0.2.14",
     "coverify": "^1.0.6",
+    "jsdoc": "^3.3.0-alpha5",
     "minimist": "~0.0.8",
     "oauth": "~0.9.11",
     "st": "~0.4.1",
@@ -35,7 +36,7 @@
   },
   "scripts": {
     "docs": "jsdoc index.js README.md && git checkout gh-pages && mv out/* . ; git add -u && rm -rf out && git commit -m 'docs: Update' && git push origin gh-pages && git checkout master",
-    "prepublish": "npm test && npm run docs",
+    "prepublish": "npm test",
     "build": "browserify -o static/smartimage-browser.js index.js",
     "watch": "watchify index.js -o static/smartimage-browser.js -dv",
     "test": "tape test/all-test.js",
