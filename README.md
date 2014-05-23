@@ -1,7 +1,7 @@
 node-smartimage
 ===============
 
-A JavaScript client for [Smartimage](www.smartimage.com). Works in node and in
+A JavaScript client for [Smartimage](http://www.smartimage.com). Works in node and in
 the browser!
 
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](./LICENSE)
