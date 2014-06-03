@@ -80,7 +80,8 @@ smartimage('GET', '/collections', query, options, cb);
 
 # Types of Results
 
-The library can also return the response body in different ways.
+The library can also return the response body in different ways. You can use
+any of the following with callbacks or promises as well.
 
 ## Receive a [Stream](http://nodejs.org/api/stream.html#stream_class_stream_readable) of Data
 
@@ -89,6 +90,10 @@ is an instance of an [`http.IncomingMessage`](http://nodejs.org/api/http.html#ht
 is a
 [`stream.Readable`](http://nodejs.org/api/stream.html#stream_class_stream_readable).
 
+```
+smartimage('GET', '/collections', null, options, cb);
+```
+
 
 ## Receive a [Buffer](http://nodejs.org/api/buffer.html) of Data
 
@@ -96,16 +101,6 @@ You can also receive a Buffer of response data using the `buffer()` method.
 
 ```
 smartimage.buffer('GET', '/collections', null, options, cb);
-```
-
-```
-// JSON Promise
-var success = function(res) {
-    console.log(res.body);
-};
-
-var query = null;
-smartimage.json('GET', '/collections', query, options).then(success);
 ```
 
 ## Receive JSON Data
