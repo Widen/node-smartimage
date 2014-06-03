@@ -4,6 +4,10 @@ node-smartimage
 A JavaScript client for [Smartimage](http://www.smartimage.com). Works in node and in
 the browser!
 
+(Note: It technically works in the browser only if you turn off CORS or use a
+proxy like [corsproxy](https://www.npmjs.org/package/corsproxy) to bypass
+CORS restrictions for now.)
+
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](./LICENSE)
 
 [![Build
