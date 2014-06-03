@@ -78,11 +78,9 @@ var query = null;
 smartimage('GET', '/collections', query, options, cb);
 ```
 
-# Data Coercion
+# Types of Results
 
-Separately from async request/response handling, this library will also
-automatically coerce the response data into the form that you need.
-
+The library can also return the response body in different ways.
 
 ## Receive a [Stream](http://nodejs.org/api/stream.html#stream_class_stream_readable) of Data
 
@@ -96,6 +94,19 @@ is a
 
 You can also receive a Buffer of response data using the `buffer()` method.
 
+```
+smartimage.buffer('GET', '/collections', null, options, cb);
+```
+
+```
+// JSON Promise
+var success = function(res) {
+    console.log(res.body);
+};
+
+var query = null;
+smartimage.json('GET', '/collections', query, options).then(success);
+```
 
 ## Receive JSON Data
 
