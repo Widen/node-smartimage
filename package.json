@@ -6,6 +6,11 @@
   "directories": {
     "test": "test"
   },
+  "keywords": [
+    "smartimage",
+    "files", "image", "images", "image management", "asset management", "assets",
+    "DAM", "widen"
+  ],
   "dependencies": {
     "debug": "~0.8.0",
     "promise": "~4.0.0"
