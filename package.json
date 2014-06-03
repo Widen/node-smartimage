@@ -1,6 +1,6 @@
 {
   "name": "smartimage",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A JavaScript client for Smartimage",
   "main": "index.js",
   "directories": {
@@ -8,8 +8,14 @@
   },
   "keywords": [
     "smartimage",
-    "files", "image", "images", "image management", "asset management", "assets",
-    "DAM", "widen"
+    "files",
+    "image",
+    "images",
+    "image management",
+    "asset management",
+    "assets",
+    "DAM",
+    "widen"
   ],
   "dependencies": {
     "debug": "~0.8.0",
